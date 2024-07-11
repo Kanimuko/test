@@ -1,0 +1,37 @@
+.wrapper {
+    position: relative;
+
+    input {
+        border: none;
+        border-radius: 10px;
+        width: 100px;
+        height: 39px;
+        padding: 15px 20px 5px 20px;        
+        cursor: pointer;
+        font-size: 32px;
+        transition: .35s;
+
+        &:focus {
+            outline: none;
+        }
+        &:focus + label, &:not(:placeholder-shown) + label {
+            top: -18%;
+            font-size: 14px;
+            transition: .35s;
+        }     
+        
+    }
+   
+
+    label {
+        position: absolute;
+        left: 20px;
+        top: 33%;
+        font-size: 16px;
+        color: #B0AFAF;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .35s;
+        
+    }
+}

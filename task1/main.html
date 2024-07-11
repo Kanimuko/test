@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<style>
+    body {margin: 0;}
+    .container {overflow: hidden;}
+    h3 {margin: 0; font-size: 24px; font-weight: 400;}
+
+
+    .main-banner {height: 25rem; background: #D3EDFC;}    
+   
+    .wrapper {display: flex; flex-wrap: wrap;}
+    .wrapper .tabs {width: 74%;}
+    .wrapper .tab-label {display: inline-block; padding: 20.5px 30px; margin-right: -4px; text-decoration: none; color: black; cursor: pointer; transition: .35s;}
+    .wrapper .tab-label:hover {background: #eee; transition: .35s;}
+
+    .wrapper .tab-item {display: none; position: relative; justify-content: space-between; flex-wrap: wrap;}
+    .wrapper input[type="radio"] {display: none;}
+    .wrapper #tab1:checked ~ .label-1,
+    .wrapper #tab2:checked ~ .label-2,
+    .wrapper #tab3:checked ~ .label-3 {background: #eee;}
+    .wrapper #tab1:checked ~ .tab-container #content1,
+    .wrapper #tab2:checked ~ .tab-container #content2,
+    .wrapper #tab3:checked ~ .tab-container #content3 {display: flex;}
+    .wrapper .tab-container {position: relative; height: 100%; padding: 30px 30px 30px 20px;}
+    .wrapper .tab-container:after {content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 1000%; background: #eee; z-index: -1;}
+    .wrapper .tab-item .column {width: 30%; min-height: 625px; padding-bottom: 30px;}
+    .wrapper .tab-item .item {width: 100%; height: 30px; background: #B0AFAF; border-radius: 4px;}
+    .wrapper .tab-item .item:not(:first-child) {margin-top: 20px;}
+    .wrapper .sitebar {margin-top: -140px; width: 25%; height: fit-content; border-radius: 8px; margin-bottom: 30px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);}
+    .wrapper .sitebar .sb-header {width: 100%; min-height: 200px; background: #FAE205; border-radius: 8px 8px 0 0;}
+    .wrapper .sitebar .sb-otherInfo {min-height: 40px; background: #B0AFAF;}
+    .wrapper .sitebar .sb-body {height: 730px; background: #fff; border-radius: 0 0 8px 8px;}
+    .wrapper .delivery {padding-bottom: 490px;}
+    .wrapper .wrapper-bottom {position: absolute; bottom: -30px; left: 0; width: 100vw; margin-left: -20px; background-color: #FFFBD2; padding: 50px 20px;}
+    .wrapper .wrapper-bottom .elements {display: flex; margin-top: 30px;}
+    .wrapper .wrapper-bottom .element {min-width: 250px; min-height: 250px; background-color: #D3EDFC; transition: .35s;}
+    .wrapper .wrapper-bottom .element:hover {box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); transition: .35s;}
+    .wrapper .wrapper-bottom .element:not(:first-child) {margin-left: 20px;}
+
+    .body-page {background-color: #fff; padding: 50px 20px;}
+    .body-page .elements {display: flex; margin-top: 30px;}
+    .body-page .element {min-width: 250px; min-height: 250px; background-color: #D3EDFC; transition: .35s;}
+    .body-page .element:hover {box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); transition: .35s;}
+    .body-page .element:not(:first-child) {margin-left: 20px;}
+
+    footer {background-color: #eee; text-align: center; margin-top: 40px; padding: 15px 0;}
+    footer span {font-size: 24px; color: #000;}    
+</style>
+<body>
+    <div class="container">
+        <div class="main-banner"></div>
+        <div class="wrapper">
+            <div class="tabs">
+                <input type="radio" name="tab" id="tab1" checked>
+                <label class="tab-label label-1" for="tab1">Description</label>
+                
+                <input type="radio" name="tab" id="tab2">
+                <label class="tab-label label-2" for="tab2">Delivery</label>
+                
+                <input type="radio" name="tab" id="tab3">
+                <label class="tab-label label-3" for="tab3">Payments</label>
+                
+                <div class="tab-container">
+                    <div id="content1" class="tab-item">
+                        <div class="column"> 
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                        </div>
+                        <div class="column">
+                            <div class="item"> </div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                        </div>
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div id="content2" class="tab-item delivery">
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>                    
+                        </div>
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>                   
+                        </div>
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>                 
+                        </div>
+                        <div class="wrapper-bottom">
+                            <h3>More products</h3>
+                            <div class="elements">
+                                <a class="element" href="/"></a>
+                                <a class="element" href="/"></a>
+                                <a class="element" href="/"></a>
+                                <a class="element" href="/"></a>
+                                <a class="element" href="/"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content3" class="tab-item">
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>       
+                        </div>
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                        </div>
+                        <div class="column">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sitebar">
+                <div class="sb-header"></div>
+                <div class="sb-otherInfo"></div>
+                <div class="sb-body"></div>
+            </div>            
+        </div>
+        <div class="body-page">
+            <h3>More products</h3>
+            <div class="elements">
+                <a class="element" href="/"></a>
+                <a class="element" href="/"></a>
+                <a class="element" href="/"></a>
+                <a class="element" href="/"></a>
+                <a class="element" href="/"></a>
+            </div>
+        </div>
+        <footer>
+            <span>© Copyright</span>
+        </footer>
+    </div>      
+</body>
+</html>
